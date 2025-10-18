@@ -144,7 +144,7 @@ void buscar_funcionario(FILE *arquivo) {
             printf("\n--- Funcionario Encontrado ---\n");
             printf("ID: %d\n", f.id);
             printf("Nome: %s\n", f.nome);
-            if (define_aniversario(&f, &d, &m)) {
+            if (verifica_aniversario(&f, &d, &m)) {
                 printf("Nascimento: %02d/%02d\n", d, m);
             } else {
                 printf("Nascimento: N/A\n");
