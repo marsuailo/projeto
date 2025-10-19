@@ -4,14 +4,12 @@
 #include <stdbool.h>
 
 // ================================
-// Estruturas e enums (novos)
+// Estruturas e enums
 // ================================
 
-// Status e cargo geral (mantidos)
 enum Status { INATIVO = 0, ATIVO, PENDENTE };
 enum Cargo { GERENTE = 1, FUNCIONARIO, ESTAGIARIO };
 
-// Função (papel) específico do funcionário — discriminador da union
 enum FuncaoPapel {
     PAPEL_NENHUM = 0,
     PAPEL_DESENVOLVEDOR = 1,
@@ -38,7 +36,7 @@ typedef struct {
     enum FaxCargo cargo_fax;
 } InfoFaxineiro;
 
-// --- Gerente (detalhe adicional do cargo) ---
+// --- Gerente ---
 enum GerenciaFuncao { GER_BANCARIO = 0, GER_JUDICIARIO, GER_ADMINISTRATIVO };
 enum GerCargo { GERENTE_PLENO = 0, GER_SUBGERENTE, GER_COMUM, GER_JOVEM_APRENDIZ };
 
@@ -56,7 +54,6 @@ typedef struct {
     enum SegCargo cargo_seg;
 } InfoSeguranca;
 
-// Union que guarda as informações específicas do papel
 typedef union {
     InfoDesenvolvedor dev;
     InfoFaxineiro fax;
@@ -71,16 +68,14 @@ typedef union {
 typedef struct {
     int id;
     char nome[50];
-    enum Cargo tipo_cargo;      // mantém compatibilidade com seu modelo original
+    enum Cargo tipo_cargo;     
     enum Status ativo;
 
-    // campo novo: função/papel discriminador + union com dados específicos
     enum FuncaoPapel papel;
     CargoInfo papel_info;
 
-    unsigned char aniversario[31][12]; // [0..30] => dias 1..31, [0..11] => meses 1..12
+    unsigned char aniversario[31][12];
 
-    // tempo na empresa (anos), 0..30
     unsigned char tempo_empresa;
 } Funcionario;
 
@@ -123,7 +118,6 @@ int verifica_aniversario(const Funcionario *f, int *dia, int *mes) {
     return 0;
 }
 
-// Funções utilitárias para imprimir enums legíveis
 const char* nome_cargo_geral(enum Cargo c) {
     switch (c) {
         case GERENTE: return "Gerente";
@@ -192,7 +186,7 @@ void ler_info_seguranca(InfoSeguranca *s) {
 }
 
 // ================================
-// Criar funcionário (atualizado)
+// Criar funcionário 
 // ================================
 
 void criar_funcionario(FILE *arquivo) {
@@ -214,7 +208,6 @@ void criar_funcionario(FILE *arquivo) {
     if (scanf("%d", &tmpCargo) != 1) tmpCargo = 2;
     f.tipo_cargo = (tmpCargo >= 1 && tmpCargo <= 3) ? (enum Cargo)tmpCargo : FUNCIONARIO;
 
-    // --- Perguntar papel/especialização (novo)
     int papel_choice;
     printf("Papel/Funcao especifica (1-Desenvolvedor,2-Faxineiro,3-Gerente,4-Seguranca,0-Nenhum): ");
     if (scanf("%d", &papel_choice) != 1) papel_choice = 0;
@@ -240,7 +233,6 @@ void criar_funcionario(FILE *arquivo) {
             break;
     }
 
-    // --- Tempo na empresa (0..30)
     int anos = -1;
     do {
         printf("Tempo na empresa (anos, 0-30): ");
@@ -347,7 +339,7 @@ void listar_funcionarios(FILE *arquivo) {
 }
 
 // ================================
-// BUSCAR FUNCIONARIO (atualizado para papel/tempo)
+// BUSCAR FUNCIONARIO 
 // ================================
 
 void buscar_funcionario(FILE *arquivo) {
@@ -380,7 +372,7 @@ void buscar_funcionario(FILE *arquivo) {
 }
 
 // ================================
-// EDITAR (adaptado para papel e tempo)
+// EDITAR
 // ================================
 
 void editar_funcionario(FILE *arquivo) {
@@ -411,14 +403,12 @@ void editar_funcionario(FILE *arquivo) {
                 limpar_buffer();
             }
 
-            // editar papel específico
             int papel_choice;
             printf("Papel atual: %s\n", nome_papel(f.papel));
             printf("Novo papel (1-Desenvolvedor,2-Faxineiro,3-Gerente,4-Seguranca,0-Manter atual): ");
             if (scanf("%d", &papel_choice) == 1) {
                 if (papel_choice >= 1 && papel_choice <= 4) {
                     f.papel = (enum FuncaoPapel)papel_choice;
-                    // ler dados do novo papel
                     switch (f.papel) {
                         case PAPEL_DESENVOLVEDOR: ler_info_desenvolvedor(&f.papel_info.dev); break;
                         case PAPEL_FAXINEIRO: ler_info_faxineiro(&f.papel_info.fax); break;
@@ -431,7 +421,6 @@ void editar_funcionario(FILE *arquivo) {
                 limpar_buffer();
             }
 
-            // editar tempo na empresa
             int anos = -1;
             printf("Tempo na empresa atual: %u anos\n", (unsigned int)f.tempo_empresa);
             printf("Novo tempo na empresa (0-30, -1 para manter): ");
@@ -459,7 +448,6 @@ void editar_funcionario(FILE *arquivo) {
             } while (mes < 0 || mes > 12);
 
             if (dia == 0 && mes == 0) {
-                // manter atual
             } else {
                 if (dia == 0) dia = cur_d ? cur_d : 1;
                 if (mes == 0) mes = cur_m ? cur_m : 1;
