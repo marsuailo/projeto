@@ -33,8 +33,8 @@ Informações específicas:
 * **Nível:** Estagiário, Júnior, Pleno, Sênior
 * **Linguagem predominante:** C, Python, Java ou Outra
 
-📸 *Screenshot ilustrativa:*
-![Desenvolvedor](https://via.placeholder.com/400x180.png?text=Desenvolvedor+Info)
+<img width="886" height="500" alt="image" src="https://github.com/user-attachments/assets/ffbb71e1-c82c-43c8-87ba-e82c80ebb954" />
+
 
 ---
 
@@ -45,8 +45,7 @@ Informações específicas:
 * **Andar responsável:** 1, 2 ou 3
 * **Cargo:** Comum ou Chefe
 
-📸 *Screenshot ilustrativa:*
-![Faxineiro](https://via.placeholder.com/400x180.png?text=Faxineiro+Info)
+<img width="650" height="350" alt="image" src="https://github.com/user-attachments/assets/615ed46d-189f-49b5-a499-3309e39ce983" />
 
 ---
 
@@ -58,7 +57,7 @@ Informações específicas:
 * **Cargo:** Pleno, Subgerente, Comum ou Jovem Aprendiz
 
 📸 *Screenshot ilustrativa:*
-![Gerente](https://via.placeholder.com/400x180.png?text=Gerente+Info)
+
 
 ---
 
@@ -69,7 +68,7 @@ Informações específicas:
 * **Local de atuação:** Andar 1, 2, 3 etc. (continuação definida no código)
 
 📸 *Screenshot ilustrativa:*
-![Segurança](https://via.placeholder.com/400x180.png?text=Seguranca+Info)
+
 
 ---
 
@@ -101,7 +100,7 @@ Permite definir o status do funcionário como:
 **Efeito:** muda a disponibilidade operacional do funcionário.
 
 📸 *Screenshot:*
-![Alterar Status](https://via.placeholder.com/400x120.png?text=Alterar+Status)
+
 
 ---
 
@@ -135,7 +134,7 @@ Mostra:
 * Informações específicas
 
 📸 *Screenshot:*
-![Visualizar](https://via.placeholder.com/420x150.png?text=Visualizar+Funcionario)
+
 
 ---
 
