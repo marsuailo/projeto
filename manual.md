@@ -56,7 +56,7 @@ Informações específicas:
 * **Função:** Bancário, Judiciário, Administrativo
 * **Cargo:** Pleno, Subgerente, Comum ou Jovem Aprendiz
 
-📸 *Screenshot ilustrativa:*
+<img width="727" height="175" alt="image" src="https://github.com/user-attachments/assets/323019ba-3416-488f-abe6-5bc99be208d3" />
 
 
 ---
@@ -67,7 +67,7 @@ Informações específicas:
 
 * **Local de atuação:** Andar 1, 2, 3 
 * **Cargo:** Supervisor, comum
-📸 *Screenshot ilustrativa:*
+<img width="712" height="173" alt="image" src="https://github.com/user-attachments/assets/b1a075d1-836a-418e-8723-1e99be3e6890" />
 
 
 ---
@@ -87,7 +87,8 @@ Cria um novo registro com:
 
 📌 *Exemplo:* cadastrar um desenvolvedor Pleno que programa em C.
 
-📸 *Screenshot ilustrativa:*
+<img width="746" height="757" alt="image" src="https://github.com/user-attachments/assets/184b4c46-7de5-44c8-9995-845d460fe5cd" />
+
 
 ---
 
@@ -101,7 +102,8 @@ Permite definir o status do funcionário como:
 
 **Efeito:** muda a disponibilidade operacional do funcionário.
 
-📸 *Screenshot:*
+<img width="680" height="362" alt="image" src="https://github.com/user-attachments/assets/de687845-be44-4e1f-9d83-5095fb9abb1b" />
+
 
 
 ---
@@ -117,7 +119,8 @@ Ao mudar o papel:
 
 ⚠️ *Atenção:* Dados anteriores do papel antigo são perdidos.
 
-📸 *Screenshot ilustrativa:*
+<img width="860" height="874" alt="image" src="https://github.com/user-attachments/assets/f7ef481b-db71-4d3f-908a-c7c72428d681" />
+
 
 ---
 
@@ -127,7 +130,8 @@ Remove completamente o registro do funcionário.
 
 **Efeito:** seu ID deixa de existir no sistema.
 
-📸 *Screenshot ilustrativa:*
+<img width="845" height="429" alt="image" src="https://github.com/user-attachments/assets/ac0c5e98-af37-42fe-9750-38ff15197a21" />
+
 
 ---
 
@@ -139,7 +143,8 @@ Mostra:
 * Papel
 * Informações específicas
 
-📸 *Screenshot:*
+<img width="790" height="542" alt="image" src="https://github.com/user-attachments/assets/8ede4893-a085-41d0-bb65-f61a6cd220be" />
+
 
 
 ---
