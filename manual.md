@@ -65,8 +65,8 @@ Informações específicas:
 
 Informações específicas:
 
-* **Local de atuação:** Andar 1, 2, 3 etc. (continuação definida no código)
-
+* **Local de atuação:** Andar 1, 2, 3 
+* **Cargo:** Supervisor, comum
 📸 *Screenshot ilustrativa:*
 
 
