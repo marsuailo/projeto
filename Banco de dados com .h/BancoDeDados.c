@@ -45,7 +45,7 @@ const char* nome_papel(enum FuncaoPapel p) {
         case PAPEL_FAXINEIRO: return "Faxineiro";
         case PAPEL_GERENTE: return "Gerente (detalhado)";
         case PAPEL_SEGURANCA: return "Seguranca";
-        default: return "Nenhum";
+        default: return "Outro";
     }
 }
 
@@ -214,7 +214,7 @@ void criar_funcionario_txt(void) {
         case 2: f.papel = PAPEL_FAXINEIRO; ler_info_faxineiro(&f.papel_info.fax); break;
         case 3: f.papel = PAPEL_GERENTE; ler_info_gerente(&f.papel_info.ger); break;
         case 4: f.papel = PAPEL_SEGURANCA; ler_info_seguranca(&f.papel_info.seg); break;
-        default: f.papel = PAPEL_NENHUM; break;
+        default: f.papel = PAPEL_OUTRO; break;
     }
 
     int anos = -1;
