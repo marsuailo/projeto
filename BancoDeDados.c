@@ -8,7 +8,7 @@
 enum Status { INATIVO = 0, ATIVO, PENDENTE };
 
 enum FuncaoPapel {
-    PAPEL_NENHUM = 0,
+    PAPEL_OUTRO = 0,
     PAPEL_DESENVOLVEDOR = 1,
     PAPEL_FAXINEIRO = 2,
     PAPEL_GERENTE = 3,
@@ -101,7 +101,7 @@ const char* nome_papel(enum FuncaoPapel p) {
         case PAPEL_FAXINEIRO: return "Faxineiro";
         case PAPEL_GERENTE: return "Gerente (detalhado)";
         case PAPEL_SEGURANCA: return "Seguranca";
-        default: return "Nenhum";
+        default: return "Outro";
     }
 }
 
@@ -254,7 +254,7 @@ void ler_info_seguranca(InfoSeguranca *s) {
 void criar_funcionario_txt(void) {
     Funcionario f; memset(&f,0,sizeof(f)); limpar_aniversario(&f);
     f.id = proximo_id_txt(NOME_ARQUIVO);
-    f.ativo = ATIVO; f.papel = PAPEL_NENHUM; f.tempo_empresa = 0;
+    f.ativo = ATIVO; f.papel = PAPEL_OUTRO; f.tempo_empresa = 0;
     limpar_buffer();
     printf("\n--- Cadastro Novo Funcionario ---\n");
     printf("Nome: ");
@@ -262,14 +262,14 @@ void criar_funcionario_txt(void) {
     f.nome[strcspn(f.nome, "\n")] = '\0';
 
     int papel_choice;
-    printf("Papel/Funcao especifica (1-Desenvolvedor,2-Faxineiro,3-Gerente,4-Seguranca,0-Nenhum): ");
+    printf("Papel/Funcao especifica (1-Desenvolvedor,2-Faxineiro,3-Gerente,4-Seguranca,0-Outro): ");
     if (scanf("%d", &papel_choice) != 1) { limpar_buffer(); papel_choice = 0; }
     switch (papel_choice) {
         case 1: f.papel = PAPEL_DESENVOLVEDOR; ler_info_desenvolvedor(&f.papel_info.dev); break;
         case 2: f.papel = PAPEL_FAXINEIRO; ler_info_faxineiro(&f.papel_info.fax); break;
         case 3: f.papel = PAPEL_GERENTE; ler_info_gerente(&f.papel_info.ger); break;
         case 4: f.papel = PAPEL_SEGURANCA; ler_info_seguranca(&f.papel_info.seg); break;
-        default: f.papel = PAPEL_NENHUM; break;
+        default: f.papel = PAPEL_OUTRO; break;
     }
 
     int anos = -1;
