@@ -6,7 +6,7 @@ enum Status { INATIVO = 0, ATIVO, PENDENTE };
 
 // Papel / função geral 
 enum FuncaoPapel {
-    PAPEL_NENHUM = 0,
+    PAPEL_OUTRO = 0,
     PAPEL_DESENVOLVEDOR = 1,
     PAPEL_FAXINEIRO = 2,
     PAPEL_GERENTE = 3,
