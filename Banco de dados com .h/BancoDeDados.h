@@ -33,7 +33,7 @@ typedef struct {
 
 // Detalhes do gerente 
 enum GerenciaFuncao { GER_BANCARIO = 0, GER_JUDICIARIO, GER_ADMINISTRATIVO };
-enum GerCargo { GERENTE_PLENO = 0, GER_SUBGERENTE, GER_COMUM, GER_JOVEM_APRENDIZ };
+enum GerCargo { GERENTE_CHEFE = 0, GER_SUBGERENTE, GER_COMUM, GER_JOVEM_APRENDIZ };
 
 typedef struct {
     enum GerenciaFuncao funcao;
