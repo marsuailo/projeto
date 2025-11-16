@@ -32,7 +32,7 @@ typedef struct {
 } InfoFaxineiro;
 
 enum GerenciaFuncao { GER_BANCARIO = 0, GER_JUDICIARIO, GER_ADMINISTRATIVO };
-enum GerCargo { GERENTE_PLENO = 0, GER_SUBGERENTE, GER_COMUM, GER_JOVEM_APRENDIZ };
+enum GerCargo { GERENTE_CHEFE = 0, GER_SUBGERENTE, GER_COMUM, GER_JOVEM_APRENDIZ };
 
 typedef struct {
     enum GerenciaFuncao funcao;
@@ -233,7 +233,7 @@ void ler_info_gerente(InfoGerenteDet *g) {
     if (scanf("%d", &tmp) != 1) { limpar_buffer(); tmp = 2; }
     g->funcao = (tmp >=0 && tmp <=2) ? (enum GerenciaFuncao)tmp : GER_ADMINISTRATIVO;
 
-    printf("Cargo do gerente (0-Gerente,1-Subgerente,2-Comum,3-Jovem Aprendiz): ");
+    printf("Cargo do gerente (0-Gerente-chefe,1-Subgerente,2-Comum,3-Jovem Aprendiz): ");
     if (scanf("%d", &tmp) != 1) { limpar_buffer(); tmp = 2; }
     g->cargo_ger = (tmp >=0 && tmp <=3) ? (enum GerCargo)tmp : GER_COMUM;
 }
@@ -322,7 +322,7 @@ void imprimir_info_papel_terminal(const Funcionario *f) {
             const InfoGerenteDet *g = &f->papel_info.ger;
             const char *funcao_str = (g->funcao == GER_BANCARIO) ? "Bancario" :
                                      (g->funcao == GER_JUDICIARIO) ? "Judiciario" : "Administrativo";
-            const char *cargo_str = (g->cargo_ger == GERENTE_PLENO) ? "Gerente" :
+            const char *cargo_str = (g->cargo_ger == GERENTE_CHEFE) ? "Gerente-chefe" :
                                     (g->cargo_ger == GER_SUBGERENTE) ? "Subgerente" :
                                     (g->cargo_ger == GER_COMUM) ? "Comum" : "Jovem Aprendiz";
             printf("Papel: Gerente (Funcao: %s, Cargo: %s)\n", funcao_str, cargo_str);
@@ -367,7 +367,7 @@ void imprimir_info_papel_arquivo(FILE *dest, const Funcionario *f) {
             const InfoGerenteDet *g = &f->papel_info.ger;
             const char *funcao_str = (g->funcao == GER_BANCARIO) ? "Bancario" :
                                      (g->funcao == GER_JUDICIARIO) ? "Judiciario" : "Administrativo";
-            const char *cargo_str = (g->cargo_ger == GERENTE_PLENO) ? "Gerente" :
+            const char *cargo_str = (g->cargo_ger == GERENTE_CHEFE) ? "Gerente-chefe" :
                                     (g->cargo_ger == GER_SUBGERENTE) ? "Subgerente" :
                                     (g->cargo_ger == GER_COMUM) ? "Comum" : "Jovem Aprendiz";
             fprintf(dest, "Papel: Gerente (Funcao: %s, Cargo: %s)\n", funcao_str, cargo_str);
