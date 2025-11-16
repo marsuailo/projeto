@@ -87,6 +87,8 @@ Cria um novo registro com:
 
 📌 *Exemplo:* cadastrar um desenvolvedor Pleno que programa em C.
 
+📸 *Screenshot ilustrativa:*
+
 ---
 
 ### 🔄 **2. Alterar Status**
@@ -115,6 +117,8 @@ Ao mudar o papel:
 
 ⚠️ *Atenção:* Dados anteriores do papel antigo são perdidos.
 
+📸 *Screenshot ilustrativa:*
+
 ---
 
 ### 🗑️ **4. Remover Funcionário**
@@ -122,6 +126,8 @@ Ao mudar o papel:
 Remove completamente o registro do funcionário.
 
 **Efeito:** seu ID deixa de existir no sistema.
+
+📸 *Screenshot ilustrativa:*
 
 ---
 
