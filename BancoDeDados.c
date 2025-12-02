@@ -161,7 +161,7 @@ Funcionario *carregar_todos_txt(const char *nome_arquivo, int *out_count) {
         Funcionario ff; memset(&ff,0,sizeof(ff)); limpar_aniversario(&ff);
         int id, ativo, papel, tempo, dia, mes, f1, f2;
         char nomebuf[256] = {0};
-        int parsed = sscanf(linha, "%d|%d|%d|%d|%d|%d|%d|%d|%255[^\n\r]",
+        int parsed = (linha, "%d|%d|%d|%d|%d|%d|%d|%d|%255[^\n\r]",
                             &id, &ativo, &papel, &tempo, &dia, &mes, &f1, &f2, nomebuf);
         if (parsed < 8) continue;
         ff.id = id; ff.ativo = (enum Status)ativo; ff.papel = (enum FuncaoPapel)papel;
@@ -577,7 +577,7 @@ void menu(void) {
                 if (exportar_listagem(NOME_LISTAGEM)) printf("Exportado para '%s' com sucesso.\n", NOME_LISTAGEM);
                 else printf("Erro ao exportar para '%s'.\n", NOME_LISTAGEM);
                 break;
-            case 0: printf("código encerrado com sucesso!\n"); break;
+            case 0: printf("codigo encerrado com sucesso!\n"); break;
             default: printf("Opcao invalida!\n");
         }
     }
