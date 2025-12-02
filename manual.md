@@ -4,7 +4,7 @@
 
 ---
 
-## 📘 **Visão Geral da Aplicação**
+ **Visão Geral da Aplicação**
 
 **RH EMPRESA** é uma aplicação para gerenciamento de funcionários com diferentes papéis estruturados por meio de "uniões discriminadas". Isso significa que cada funcionário possui um papel específico, e cada papel ativa um conjunto distinto de informações.
 
@@ -12,7 +12,7 @@ Este manual descreve todas as funções, operações e comportamentos da aplica�
 
 ---
 
-## 📂 **Estrutura dos Funcionários**
+**Estrutura dos Funcionários**
 
 Cada funcionário possui:
 
@@ -24,9 +24,9 @@ A aplicação utiliza um discriminador (`FuncaoPapel`) que define qual estrutura
 
 ---
 
-## 🧩 **Papéis e Atributos**
+ **Papéis e Atributos**
 
-### 👨‍💻 Desenvolvedor
+### Desenvolvedor
 
 Informações específicas:
 
@@ -38,7 +38,7 @@ Informações específicas:
 
 ---
 
-### 🧹 Faxineiro
+### Faxineiro
 
 Informações específicas:
 
@@ -49,7 +49,7 @@ Informações específicas:
 
 ---
 
-### 👔 Gerente
+###Gerente
 
 Informações específicas:
 
@@ -61,7 +61,7 @@ Informações específicas:
 
 ---
 
-### 🛡️ Segurança
+### Segurança
 
 Informações específicas:
 
@@ -72,9 +72,9 @@ Informações específicas:
 
 ---
 
-## ⚙️ **Operações da Aplicação**
+## **Operações da Aplicação**
 
-### ➕ **1. Cadastrar Funcionário**
+### **1. Cadastrar Funcionário**
 
 Cria um novo registro com:
 
@@ -85,14 +85,14 @@ Cria um novo registro com:
 
 **Efeito:** adiciona o funcionário ao sistema.
 
-📌 *Exemplo:* cadastrar um desenvolvedor Pleno que programa em C.
+*Exemplo:* cadastrar um desenvolvedor Pleno que programa em C.
 
 <img width="746" height="757" alt="image" src="https://github.com/user-attachments/assets/184b4c46-7de5-44c8-9995-845d460fe5cd" />
 
 
 ---
 
-### 🔄 **2. Alterar Status**
+### **2. Alterar Status**
 
 Permite definir o status do funcionário como:
 
@@ -108,7 +108,7 @@ Permite definir o status do funcionário como:
 
 ---
 
-### ✏️ **3. Alterar Papel do Funcionário**
+### **3. Alterar Papel do Funcionário**
 
 Ao mudar o papel:
 
@@ -117,14 +117,14 @@ Ao mudar o papel:
 
 **Efeito:** o funcionário assume outro conjunto de atributos.
 
-⚠️ *Atenção:* Dados anteriores do papel antigo são perdidos.
+*Atenção:* Dados anteriores do papel antigo são perdidos.
 
 <img width="860" height="874" alt="image" src="https://github.com/user-attachments/assets/f7ef481b-db71-4d3f-908a-c7c72428d681" />
 
 
 ---
 
-### 🗑️ **4. Remover Funcionário**
+### **4. Remover Funcionário**
 
 Remove completamente o registro do funcionário.
 
@@ -135,7 +135,7 @@ Remove completamente o registro do funcionário.
 
 ---
 
-### 📄 **5. Visualizar Dados do Funcionário**
+### **5. Visualizar Dados do Funcionário**
 
 Mostra:
 
@@ -149,7 +149,7 @@ Mostra:
 
 ---
 
-## 📝 **Notas Importantes**
+## **Notas Importantes**
 
 * A aplicação utiliza *enumerações* para garantir integridade de dados.
 * Apenas a estrutura correspondente ao papel ativo pode ser acessada.
@@ -157,10 +157,10 @@ Mostra:
 
 ---
 
-## 📚 **Contato e Suporte**
+## **Contato e Suporte**
 
 Para dúvidas ou suporte técnico, entre em contato com o administrador da aplicação.
 
 ---
 
-### ✔️ *Fim do manual*
+### *Fim do manual*
