@@ -161,7 +161,7 @@ Funcionario *carregar_todos_txt(const char *nome_arquivo, int *out_count) {
         Funcionario ff; memset(&ff,0,sizeof(ff)); limpar_aniversario(&ff);
         int id, ativo, papel, tempo, dia, mes, f1, f2;
         char nomebuf[256] = {0};
-        int parsed = sscanf(linha, "%d|%d|%d|%d|%d|%d|%d|%d|%255[^\n\r]",
+        int parsed = sscanf(linha, "%d|%d|%d|%d|%d|%d|%d|%d|%c255[^\n\r]",
                     &id, &ativo, &papel, &tempo, &dia, &mes, &f1, &f2, nomebuf);
         if (parsed < 8) continue;
         ff.id = id; ff.ativo = (enum Status)ativo; ff.papel = (enum FuncaoPapel)papel;
