@@ -131,7 +131,8 @@ Remove completamente o registro do funcionário.
 
 **Efeito:** seu ID deixa de existir no sistema.
 
-<img width="845" height="429" alt="image" src="https://github.com/user-attachments/assets/ac0c5e98-af37-42fe-9750-38ff15197a21" />
+<img width="942" height="461" alt="image" src="https://github.com/user-attachments/assets/7e613192-eba1-4e56-896e-995bfd340ed4" />
+
 
 
 ---
