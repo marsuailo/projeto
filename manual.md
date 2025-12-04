@@ -119,7 +119,8 @@ Ao mudar o papel:
 
 *Atenção:* Dados anteriores do papel antigo são perdidos.
 
-<img width="860" height="874" alt="image" src="https://github.com/user-attachments/assets/f7ef481b-db71-4d3f-908a-c7c72428d681" />
+<img width="1112" height="603" alt="image" src="https://github.com/user-attachments/assets/fbb5a82c-38f5-4b86-a720-a75b8d61ebf1" />
+
 
 
 ---
